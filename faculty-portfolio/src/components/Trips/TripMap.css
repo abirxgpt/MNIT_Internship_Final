@@ -1,0 +1,27 @@
+.tripMapBox {
+  margin-top: 40px;
+}
+
+.headingTrips {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.trip-map {
+  height: 500px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  background: #fff0ff;
+  box-shadow: 0 0 12px rgba(141, 73, 228, 0.4);
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+}
+
+.leaflet-popup-tip {
+  background: #fff0ff;
+}

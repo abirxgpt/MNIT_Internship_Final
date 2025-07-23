@@ -1,0 +1,44 @@
+.timeline-wrapper {
+  padding: 60px 5%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 3px solid #8d49e4;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #8d49e4;
+  border-radius: 50%;
+  position: absolute;
+  left: -9px;
+  top: 5px;
+}
+
+.timeline-content {
+  background: #fdfdfd;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.timeline-content h3 {
+  margin: 0 0 5px;
+  color: #6d35e4;
+}
+
+.timeline-content img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}

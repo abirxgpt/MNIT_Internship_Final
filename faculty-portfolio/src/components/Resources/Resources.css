@@ -1,0 +1,208 @@
+.resourcesBox {
+  padding: 70px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* background-color: #ffffff; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.resourcesBox h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #222222;
+  border-left: 4px solid #b67be6;
+  padding-left: 12px;
+}
+
+.resources {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.alink {
+  text-decoration: underline;
+  color: rgb(101, 101, 255);
+}
+
+.alink:hover {
+  text-decoration: underline;
+}
+
+.pyqs p:last-child,
+.impques p:last-child,
+.videolinks p:last-child,
+.notes p:last-child {
+  background-color: #fafafa;
+  border-left-color: #b67be6;
+  padding-left: 16px;
+  margin-bottom: 0;
+}
+
+/* Also for the last-child p in each category (the "no items" messages): */
+.pyqs p:last-child {
+  border-left-color: #8d49e4;
+}
+
+.impques p:last-child {
+  border-left-color: #b67be6;
+}
+
+.videolinks p:last-child {
+  border-left-color: #ce85f5;
+}
+
+.notes p:last-child {
+  border-left-color: #dfaaff;
+}
+
+
+.dropdown-content {
+  padding: 18px 24px;
+  background-color: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.dropdown-content p {
+  margin: 6px 0;
+}
+
+.resources p {
+  padding: 12px 18px;
+  border-left: 5px solid transparent;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  cursor: default;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(141, 73, 228, 0.07);
+}
+
+.resources .previous-papers p {
+  border-left-color: #8d49e4;
+}
+
+.resources .important-questions p {
+  border-left-color: #b67be6;
+}
+
+.resources .video-links p {
+  border-left-color: #ce85f5;
+}
+
+.resources .notes p {
+  border-left-color: #dfaaff;
+}
+
+.resources p:hover {
+  box-shadow: 0 4px 20px rgba(141, 73, 228, 0.2);
+  transform: translateX(4px);
+}
+
+.no-resource-records {
+  font-style: italic;
+  background-color: #fafafa;
+  padding-left: 16px;
+  margin-bottom: 0;
+  color: #666;
+  -webkit-user-select: none;
+  user-select: none;
+  border-left: 5px solid transparent;
+  /* fallback */
+}
+
+.pyqs .no-resource-records {
+  border-left-color: #8d49e4;
+}
+
+.impques .no-resource-records {
+  border-left-color: #b67be6;
+}
+
+.videolinks .no-resource-records {
+  border-left-color: #ce85f5;
+}
+
+.notes .no-resource-records {
+  border-left-color: #e7d8fa;
+}
+
+@media (max-width: 768px) {
+  .resourcesBox {
+    padding: 60px 6% 40px;
+    align-items: center;
+  }
+
+  .resourcesBox h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+    border-bottom: 3px solid #b67be6;
+    padding-bottom: 8px;
+    width: 100%;
+  }
+
+  .resources p {
+    font-size: 15px;
+    padding: 10px 14px;
+    width: 92%;
+  }
+
+  .alink {
+    word-break: break-all;
+  }
+
+  .no-resource-records {
+    font-size: 14px;
+    width: 90%;
+    /* padding: 12px 16px; */
+  }
+}
+
+@media (max-width: 480px) {
+  .resourcesBox h1 {
+    font-size: 1.4rem;
+  }
+
+  .resources p {
+    font-size: 13.5px;
+    width: 88%;
+    /* padding: 8px 12px; */
+  }
+
+  .no-resource-records {
+    font-size: 13px;
+    padding: 10px 14px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .resourcesBox {
+    padding: 70px 8%;
+  }
+
+  .resourcesBox h1 {
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+
+  .resources p {
+    font-size: 15px;
+  }
+
+  .alink {
+    word-break: break-all;
+  }
+
+  .no-resource-records {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,120 @@
+.addTripBox,
+.tripListBox {
+  padding: 70px 5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tripListBox h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #222222;
+  border-left: 4px solid #b67be6;
+  padding-left: 12px;
+}
+
+.trip-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+}
+
+.trip-form input,
+.trip-form textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  font-size: 15px;
+}
+
+.trip-form button {
+  background: linear-gradient(to right, #8d49e4, #ce85f5);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.trip-form button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.trip-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.trip-card {
+  border-left: 6px solid #a972f1;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.trip-card:hover {
+  box-shadow: 0 4px 20px rgba(141, 73, 228, 0.2);
+  transform: translateX(5px);
+}
+
+.trip-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.trip-info h3 {
+  /* margin: 0; */
+  font-size: 23px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.trip-description {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .tripListBox {
+    padding: 50px 6% 40px;
+    align-items: center;
+  }
+
+  .tripListBox h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+    border-bottom: 3px solid #b67be6;
+    padding-bottom: 8px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tripListBox h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .tripListBox {
+    padding: 60px 8%;
+  }
+
+  .tripListBox h1 {
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+}

@@ -1,0 +1,202 @@
+.admin-dashboard {
+    padding: 70px 5%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222222;
+}
+
+.admin-dashboard h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: #222222;
+    border-left: 4px solid #b67be6;
+    padding-left: 12px;
+}
+
+.pending-section {
+    background: #fff7ff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(141, 73, 228, 0.1);
+}
+
+.pending-section p {
+    margin-top: 10px;
+}
+
+.pending-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(141, 73, 228, 0.1);
+}
+
+.pending-table thead tr th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.pending-table thead tr th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.pending-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.pending-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+.pending-table th,
+.pending-table td {
+    border: 1px solid #e5d9f2;
+    padding: 12px;
+    text-align: center;
+}
+
+.pending-table th {
+    background: #f1e3ff;
+}
+
+.approve-btn {
+    background: #96de88;
+    border: none;
+    padding: 6px 12px;
+    margin-right: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.reject-btn {
+    background: #ff8989;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.approve-btn:hover {
+    background: #8bd884;
+}
+
+.reject-btn:hover {
+    background: #f18d8d;
+}
+
+
+/* 📱 Mobile: max-width 480px */
+@media (max-width: 480px) {
+    .admin-dashboard {
+        padding: 60px 4%;
+    }
+
+    .admin-dashboard h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        padding-left: 0;
+        border-left: none;
+        border-bottom: 3px solid #b67be6;
+        padding-bottom: 8px;
+        width: 100%;
+    }
+
+    .pending-section {
+        padding: 1rem;
+    }
+
+    .pending-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 8px;
+    }
+
+    .pending-table th,
+    .pending-table td {
+        padding: 10px 12px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    .pending-table::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .pending-table::-webkit-scrollbar-thumb {
+        background: #c292e9;
+        border-radius: 8px;
+    }
+
+    .approve-btn,
+    .reject-btn {
+        width: auto;
+        margin-top: 4px;
+        font-size: 13px;
+    }
+}
+
+/* 📲 Tablet: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .admin-dashboard {
+        padding: 60px 6%;
+    }
+
+    .admin-dashboard h1 {
+        font-size: 1.6rem;
+        text-align: center;
+        padding-left: 0;
+        border-left: none;
+        border-bottom: 3px solid #b67be6;
+        padding-bottom: 8px;
+        width: 100%;
+    }
+
+    .pending-section {
+        padding: 1.2rem;
+    }
+
+    .pending-table th,
+    .pending-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .approve-btn,
+    .reject-btn {
+        padding: 5px 10px;
+    }
+}
+
+/* 💻 Mid Desktop: 769px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .admin-dashboard {
+        padding: 65px 8%;
+    }
+
+    .admin-dashboard h1 {
+        font-size: 1.8rem;
+        padding-left: 10px;
+    }
+
+    .pending-section {
+        padding: 1.4rem;
+    }
+
+    .pending-table {
+        border-radius: 8px;
+    }
+
+    .pending-table th,
+    .pending-table td {
+        padding: 11px;
+    }
+}

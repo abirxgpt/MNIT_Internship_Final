@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+}
+body {
+  background: radial-gradient(circle at 20% 30%, #e8c6f6, transparent 40%),
+              radial-gradient(circle at 80% 70%, #b9e0f6, transparent 50%),
+              radial-gradient(circle at 60% 20%, #f2bdd8, transparent 40%),
+              radial-gradient(circle at 20% 80%, #bffae3, transparent 35%);
+  background-color: #fefcff;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Gradient background and soft glow */
+.custom-toast {
+  background: 
+    radial-gradient(circle at 20% 30%, #f0ddf7, transparent 40%),
+    radial-gradient(circle at 80% 70%, #d9e8f1, transparent 50%),
+    radial-gradient(circle at 60% 20%, #f2dae7, transparent 40%),
+    radial-gradient(circle at 20% 80%, #e7f6f0, transparent 35%),
+    linear-gradient(135deg, #ead9f1, #e6dbfa);
+  color: #222222;
+  font-weight: 100;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(141, 73, 228, 0.2);
+  padding: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+/* Close button customization */
+.Toastify__close-button {
+  color: #222222;
+}
+
+/* Progress bar as a soft shimmer */
+.Toastify__progress-bar {
+  /* background: 
+    radial-gradient(circle at 20% 30%, #b716f1, transparent 40%),
+    radial-gradient(circle at 80% 70%, #0d9ff4, transparent 50%),
+    radial-gradient(circle at 60% 20%, #f9178f, transparent 40%),
+    radial-gradient(circle at 20% 80%, #12f49e, transparent 35%),
+    linear-gradient(135deg, #cb6af1, #9a68f8); */
+  height: 4px;
+  border-radius: 10px;
+}

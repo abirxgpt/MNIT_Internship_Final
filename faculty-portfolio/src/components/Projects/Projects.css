@@ -1,0 +1,142 @@
+.projectsBox {
+  padding: 70px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: #ffffff; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222222;
+}
+
+.projectsBox h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #222222;
+  border-left: 4px solid #b67be6;
+  padding-left: 12px;
+}
+
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Each project entry styled similar to publications and courses */
+.project-entry {
+  padding: 12px 18px;
+  margin-bottom: 9px;
+  border-left: 5px solid transparent;
+  border-radius: 12px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #4a4a4a;
+  cursor: default;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(141, 73, 228, 0.07);
+  background-color: #fff;
+}
+
+/* Differentiate project status by border color */
+.dropdown-title-ongoing + .dropdown-content .project-entry,
+.projects > div:first-child .project-entry {
+  border-left-color: #8d49e4;
+}
+
+.dropdown-title-completed + .dropdown-content .project-entry,
+.projects > div:last-child .project-entry {
+  border-left-color: #b67be6;
+}
+
+/* Hover effect: subtle shadow and slide */
+.project-entry:hover, .no-project-records:hover{
+  box-shadow: 0 4px 20px rgba(141, 73, 228, 0.2);
+  transform: translateX(4px);
+  /* color: #2e1a72; */
+}
+
+/* Paragraphs inside project entry */
+/* .project-entry p {
+  margin: 4px 0;
+} */
+
+/* Co-investigators list (optional) */
+/* .project-entry p strong {
+  font-weight: 600;
+} */
+
+
+/* No records found style */
+.no-project-records {
+  border-left: 5px solid #8d49e4;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-style: italic;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(141, 73, 228, 0.07);
+}
+
+@media (max-width: 768px) {
+  .projectsBox {
+    padding: 60px 6% 40px;
+    align-items: center;
+  }
+
+  .projectsBox h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+    border-bottom: 3px solid #b67be6;
+    padding-bottom: 8px;
+    width: 100%;
+  }
+
+  .projects {
+    width: 100%;
+  }
+
+  .project-entry {
+    font-size: 16px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectsBox h1 {
+    font-size: 1.4rem;
+  }
+
+  .project-entry {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projectsBox {
+    padding: 70px 8%;
+  }
+
+  .projectsBox h1 {
+    font-size: 1.8rem;
+    padding-left: 10px;
+  }
+
+  .projects {
+    width: 100%;
+  }
+
+  .project-entry {
+    font-size: 16.5px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+  }
+}

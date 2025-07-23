@@ -1,0 +1,77 @@
+.add-phd-wrapper {
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 670px;
+}
+
+.h2Head {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.input-group .input,
+.input-group .select {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+    /* border: 1px solid #ccc; */
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.add-phd-button {
+    width: 30%;
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #8d49e4, #ce85f5);
+    box-shadow: 0 4px 15px 3px rgba(141, 73, 228, 0.3);
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.add-phd-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* .phdStatus-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 500;
+    color: red;
+} */

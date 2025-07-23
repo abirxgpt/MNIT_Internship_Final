@@ -1,0 +1,136 @@
+.add-achievement-wrapper {
+    margin: 45px auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 520px;
+}
+
+.add-achievement-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.input-groupA {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 250px;
+}
+
+.input-groupA input,
+.input-groupA select {
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+    /* width: 100%; */
+}
+
+.input-groupA label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.add-achievement-button {
+    width: 42%;
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    background: linear-gradient(to right, #8d49e4, #ce85f5);
+    box-shadow: 0 4px 15px 3px rgba(141, 73, 228, 0.3);
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.add-achievement-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Mobile: 0–480px */
+@media (max-width: 480px) {
+  .add-achievement-wrapper {
+    width: 92%;
+    padding: 25px;
+    margin: 30px auto;
+  }
+
+  .add-achievement-wrapper h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .input-groupA {
+    min-width: 100%;
+  }
+
+  .add-achievement-button {
+    width: 100%;
+  }
+}
+
+/* Tablet Portrait: 481–768px */
+@media (max-width: 768px) {
+  .add-achievement-wrapper {
+    width: 82%;
+    padding: 30px;
+  }
+
+  .add-achievement-wrapper h2 {
+    font-size: 1.6rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .input-groupA {
+    min-width: 100%;
+  }
+
+  .add-achievement-button {
+    width: 100%;
+  }
+}
+
+/* Tablet Landscape: 769–1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .add-achievement-wrapper {
+    width: 80%;
+    padding: 35px;
+  }
+
+  .add-achievement-wrapper h2 {
+    font-size: 1.8rem;
+  }
+
+  .add-achievement-button {
+    width: 50%;
+  }
+}

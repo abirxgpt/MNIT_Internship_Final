@@ -1,0 +1,270 @@
+html,
+body {
+    width: 100%;
+    /* overflow-x: hidden; */
+    box-sizing: border-box;
+}
+
+.syllabus-view-container {
+    margin-top: 20px;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 850px;
+    margin: 50px auto;
+    line-height: 1.6;
+    color: #222;
+    background: rgba(255, 255, 255, 0.499);
+    border-radius: 20px;
+}
+
+.syllabus-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.syllabus-info-box p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.course-description {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.toggle-button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #8d49e4, #ce85f5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    box-shadow: 0 4px 12px rgba(141, 73, 228, 0.25);
+}
+
+.toggle-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.pdf-preview iframe {
+    width: 100%;
+    height: 600px;
+    border: 0.6px solid #ccc;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.lecture-plan-heading {
+    color: #333;
+}
+
+.lecture-table {
+    /* width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 15px;
+    background-color: #fff;
+    font-size: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.lecture-table td {
+    border: 0.2px solid #b67be6;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.lecture-table th {
+    border-top: 4px solid #b67be6 !important;
+    padding: 10px 14px;
+    border: 0.2px solid #b67be6;
+    background-color: #fde4fd;
+    font-weight: 600;
+    text-align: center;
+}
+
+.lecture-table thead tr:first-child th:first-child {
+    border-top-left-radius: 12px;
+}
+
+.lecture-table thead tr:first-child th:last-child {
+    border-top-right-radius: 12px;
+}
+
+.lecture-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.lecture-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+}
+
+.material-link {
+    margin-right: 10px;
+    /* font-weight: bold; */
+    text-decoration: underline;
+    color: rgb(101, 101, 255);
+}
+
+.material-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .syllabus-view-container {
+        padding: 30px 16px;
+        margin: 40px 12px;
+    }
+
+    .syllabus-title {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .course-description,
+    .syllabus-info-box p,
+    .year {
+        font-size: 15px;
+        /* text-align: center; */
+    }
+
+    .toggle-button {
+        font-size: 13px;
+        padding: 8px 16px;
+        display: block;
+        margin: 12px auto;
+    }
+
+    .pdf-preview iframe {
+        height: 400px;
+    }
+
+    .lecture-plan-heading {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-top: 30px;
+    }
+
+    .lecture-table {
+        width: 100%;
+        /* overflow-x: auto; */
+        /* display: block; */
+        box-sizing: border-box;
+    }
+
+    .lecture-table thead,
+    .lecture-table tbody,
+    .lecture-table th,
+    .lecture-table td,
+    .lecture-table tr {
+        white-space: nowrap;
+    }
+
+    .lecture-table::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .lecture-table::-webkit-scrollbar-thumb {
+        background: #b67be6;
+        border-radius: 8px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .syllabus-title {
+        font-size: 1.4rem;
+    }
+
+    .lecture-table th,
+    .lecture-table td {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .toggle-button {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
+    .pdf-preview iframe {
+        height: 350px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .syllabus-view-container {
+        padding: 50px 40px;
+        margin: 40px auto;
+    }
+
+    .syllabus-title {
+        font-size: 1.8rem;
+    }
+
+    .course-description,
+    .syllabus-info-box p,
+    .year {
+        font-size: 16px;
+    }
+
+    .toggle-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .pdf-preview iframe {
+        height: 500px;
+    }
+
+    .lecture-plan-heading {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    .lecture-table {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .lecture-table th,
+    .lecture-table td {
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+}
+
+.lecture-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    /* -webkit-overflow-scrolling: touch; */
+}
+
+.lecture-table-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.lecture-table-wrapper::-webkit-scrollbar-thumb {
+    background: #c292e9;
+    border-radius: 8px;
+}

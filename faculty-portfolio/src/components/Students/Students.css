@@ -1,0 +1,172 @@
+.students-container {
+  padding: 70px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222222;
+}
+
+.students-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  border-left: 4px solid #b67be6;
+  padding-left: 12px;
+}
+
+.student-list {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.student-item {
+  width: 98%;
+  padding: 12px 16px;
+  background-color: #f9f9f9;
+  border-left: 5px solid;
+  border-radius: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444444;
+  box-shadow: 0 2px 8px rgba(141, 73, 228, 0.07);
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.student-item.ongoing {
+  border-left-color: #8d49e4;
+}
+
+.student-item.completed {
+  border-left-color: #b67be6;
+}
+
+.student-item:hover,
+.no-students:hover {
+  box-shadow: 0 4px 20px rgba(141, 73, 228, 0.2);
+  transform: translateX(4px);
+}
+
+.no-students {
+  width: 96%;
+  padding: 14px 20px;
+  border-left: 5px solid #8d49e4;
+  border-radius: 12px;
+  font-style: italic;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(141, 73, 228, 0.07);
+  -webkit-user-select: none;
+  user-select: none;
+  transition: all 0.25s ease;
+}
+
+.degree-section > summary,
+.status-section > summary {
+  font-weight: 600;
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-bottom: 16px;
+  color: #8d49e4;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.status-section {
+  margin-left: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.degree-section > summary:hover,
+.status-section > summary:hover {
+  color: #6b30c9;
+}
+
+.ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+details > summary {
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .students-container {
+    padding: 60px 6% 40px;
+    align-items: center;
+  }
+
+  .students-title {
+    font-size: 1.6rem;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+    border-bottom: 3px solid #b67be6;
+    padding-bottom: 8px;
+    width: 100%;
+  }
+
+  .student-item {
+    font-size: 14.5px;
+    width: 90%;
+  }
+
+  .no-students {
+    font-size: 14.5px;
+    width: 90%;
+  }
+
+  .degree-section,
+  .status-section {
+    width: 90%;
+  }
+
+  .degree-section > summary {
+    font-size: 1.2rem;
+  }
+
+  .status-section > summary {
+    font-size: 1.05rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .degree-section > summary,
+  .status-section > summary {
+    font-size: 1rem;
+  }
+
+  .student-item {
+    font-size: 14px;
+  }
+
+  .no-students {
+    font-size: 14px;
+    width: 85%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .status-section {
+    margin-left: 16px;
+  }
+
+  .status-section > summary,
+  .degree-section > summary {
+    font-size: 1.2rem;
+  }
+
+  .student-item {
+    font-size: 15px;
+  }
+
+  .no-students {
+    font-size: 14px;
+  }
+}

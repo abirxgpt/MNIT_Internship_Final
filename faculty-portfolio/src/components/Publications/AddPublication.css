@@ -1,0 +1,135 @@
+.add-publication-wrapper {
+    /* max-width: 700px; */
+    margin: 45px auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-publication-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    font-weight: 700;
+}
+
+.publication-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.publication-form .input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.publication-form label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.publication-form input,
+.publication-form select {
+    padding: 12px 14px;
+    font-size: 1rem;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    transition: border-color 0.3s;
+    background-color: #fff;
+    width: 100%;
+}
+
+/* .publication-form input:focus,
+.publication-form select:focus {
+    border-color: #a278d1;
+    outline: none;
+} */
+
+.date-font{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-publication-button {
+    width: 42%;
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #8d49e4, #ce85f5);
+    box-shadow: 0 4px 15px 3px rgba(141, 73, 228, 0.3);
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.add-publication-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ----------------------- Responsive ----------------------- */
+
+@media (max-width: 768px) {
+    .add-publication-wrapper {
+        padding: 24px;
+    }
+
+    .add-publication-wrapper h2 {
+        font-size: 1.6rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .add-publication-button {
+        width: 70%;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-publication-wrapper {
+        padding: 25px 23px;
+    }
+
+    .add-publication-wrapper h2 {
+        font-size: 1.4rem;
+    }
+
+    .input-group input,
+    .input-group select {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+
+    .add-publication-button {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .add-publication-wrapper {
+        padding: 36px;
+    }
+
+    .add-publication-wrapper h2 {
+        font-size: 1.8rem;
+    }
+
+    .add-publication-button {
+        width: 55%;
+        font-size: 1rem;
+    }
+}
