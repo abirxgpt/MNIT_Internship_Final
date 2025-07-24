@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/MNIT_Internship/', 
   build: {
-    outDir: 'build',
+    outDir: 'dist',
   },
   server: {
     historyApiFallback: true
