@@ -9,7 +9,7 @@ const PhDSupervised = () => {
   useEffect(() => {
     const fetchPhDData = async () => {
       try {
-        const response = await fetch('https://faculty-backend-koz0.onrender.com/api/phd/all');
+        const response = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/phd/all');
         const data = await response.json();
         setPhdList(data);
       } catch (error) {

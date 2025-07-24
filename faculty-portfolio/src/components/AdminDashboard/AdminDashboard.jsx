@@ -12,7 +12,7 @@ const AdminDashboard = () => {
 
     const fetchPending = async () => {
         try {
-            const res = await fetch('https://faculty-backend-koz0.onrender.com/api/newstudents/pending');
+            const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/newstudents/pending');
             const data = await res.json();
             setPendingStudents(data);
         } catch (err) {
@@ -24,7 +24,7 @@ const AdminDashboard = () => {
 
     const handleApprove = async (id) => {
         try {
-            const res = await fetch(`https://faculty-backend-koz0.onrender.com/api/newstudents/approve/${id}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/newstudents/approve/${id}`, {
                 method: 'POST',
             });
             const data = await res.json();
@@ -56,7 +56,7 @@ const AdminDashboard = () => {
 
     const handleReject = async (id) => {
         try {
-            const res = await fetch(`https://faculty-backend-koz0.onrender.com/api/newstudents/reject/${id}`, {
+            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/newstudents/reject/${id}`, {
                 method: 'POST',
             });
             const data = await res.json();

@@ -45,7 +45,7 @@ function AddStudent() {
         }
 
         try {
-            const res = await fetch('https://faculty-backend-koz0.onrender.com/api/students/add', {
+            const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/students/add', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),

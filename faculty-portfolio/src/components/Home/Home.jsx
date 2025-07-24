@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch('https://faculty-backend-koz0.onrender.com/api/profile');
+        const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/profile');
         if (!res.ok) throw new Error('Failed to load profile');
 
         const data = await res.json();
@@ -67,7 +67,7 @@ function Home() {
               <IoIosDocument className="cv-icon" />
               {profile && profile.detailedCV ? (
                 <a
-                  href={`https://faculty-backend-koz0.onrender.com/${profile.detailedCV}`}
+                  href={`${import.meta.env.VITE_API_BASE_URL}/${profile.detailedCV}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

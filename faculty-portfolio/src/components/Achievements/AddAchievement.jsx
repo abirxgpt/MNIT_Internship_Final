@@ -31,7 +31,7 @@ const AddAchievement = () => {
         };
 
         try {
-            const res = await fetch('https://faculty-backend-koz0.onrender.com/api/achievements/add', {
+            const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/achievements/add', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),

@@ -24,7 +24,7 @@ const SyllabusView = () => {
     useEffect(() => {
         const fetchSyllabus = async () => {
             try {
-                const res = await fetch(`https://faculty-backend-koz0.onrender.com/api/courses/${courseId}`);
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/courses/${courseId}`);
                 console.log(res);
                 const data = await res.json();
                 console.log(data);
@@ -38,7 +38,7 @@ const SyllabusView = () => {
                         setSession(yearDetails.session || '');
 
                         const lecPlanRes = await fetch(
-                            `https://faculty-backend-koz0.onrender.com/api/courses/get-lecture-plan/${courseId}?year=${year}&session=${yearDetails.session}`
+                            `${import.meta.env.VITE_API_BASE_URL}/api/courses/get-lecture-plan/${courseId}?year=${year}&session=${yearDetails.session}`
                         );
                         const lecPlanData = await lecPlanRes.json();
                         setLecturePlan(lecPlanData || []);

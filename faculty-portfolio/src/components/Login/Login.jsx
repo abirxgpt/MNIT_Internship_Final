@@ -35,7 +35,7 @@ const Login = () => {
         setIsLoggingIn(true);
 
         try {
-            const response = await fetch("https://faculty-backend-koz0.onrender.com/api/auth/login", {
+            const response = await fetch("${import.meta.env.VITE_API_BASE_URL}/api/auth/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -76,7 +76,7 @@ const Login = () => {
     const handleRegister = async () => {
         setIsRegistering(true);
         try {
-            const response = await fetch("https://faculty-backend-koz0.onrender.com/api/newstudents/register", {
+            const response = await fetch("${import.meta.env.VITE_API_BASE_URL}/api/newstudents/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(regForm)

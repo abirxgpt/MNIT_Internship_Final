@@ -9,7 +9,7 @@ function Projects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('https://faculty-backend-koz0.onrender.com/api/projects/all');
+        const response = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/projects/all');
         const data = await response.json();
         setProjects(data);
       } catch (err) {

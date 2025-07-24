@@ -14,7 +14,7 @@ const AddLecturePlan = () => {
     useEffect(() => {
         // Fetch courses for dropdown
         const fetchCourses = async () => {
-            const response = await fetch('https://faculty-backend-koz0.onrender.com/api/courses/all');
+            const response = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/courses/all');
             const data = await response.json();
             setCourses(data);
         };
@@ -62,7 +62,7 @@ const AddLecturePlan = () => {
         }
 
         try {
-            const response = await fetch(`https://faculty-backend-koz0.onrender.com/api/courses/add-lecture-plan/${selectedCourseId}`, {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/courses/add-lecture-plan/${selectedCourseId}`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 // body: JSON.stringify({

@@ -59,7 +59,7 @@ const AddGallery = () => {
         }
         console.log("Submitting:", { image, caption, category, date });
         try {
-            // const res = await fetch('https://faculty-backend-koz0.onrender.com/api/gallery/add', {
+            // const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/gallery/add', {
             //     method: 'POST',
             //     headers: { 'Content-Type': 'application/json' },
             //     body: JSON.stringify({ image, caption, category, date }),

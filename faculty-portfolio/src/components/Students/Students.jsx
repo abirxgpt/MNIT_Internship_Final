@@ -9,7 +9,7 @@ const Students = () => {
     useEffect(() => {
         const fetchStudents = async () => {
             try {
-                const res = await fetch("https://faculty-backend-koz0.onrender.com/api/students/all");
+                const res = await fetch("${import.meta.env.VITE_API_BASE_URL}/api/students/all");
                 if (!res.ok) throw new Error("Network response was not ok");
                 const data = await res.json();
                 setStudents(data);
