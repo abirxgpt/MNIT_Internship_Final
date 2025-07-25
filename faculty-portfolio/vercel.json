@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/MNIT_Internship/", "destination": "/MNIT_Internship/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
