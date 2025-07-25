@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://medha-bhargava.github.io/MNIT_Internship",
+  "homepage": "https://mnit-internship-final-8fao.vercel.app/MNIT_Internship",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
