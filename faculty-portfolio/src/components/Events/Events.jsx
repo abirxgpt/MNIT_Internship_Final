@@ -9,7 +9,7 @@ function Events() {
     useEffect(() => {
         const fetchEvents = async () => {
             try {
-                const response = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/events/all');
+                const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/events/all`);
                 const data = await response.json();
                 setEvents(data);
             } catch (err) {

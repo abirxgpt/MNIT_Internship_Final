@@ -5,7 +5,7 @@ function TripTimeline() {
   const [trips, setTrips] = useState([]);
 
   useEffect(() => {
-    fetch('${import.meta.env.VITE_API_BASE_URL}/api/trips/all')
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/trips/all`)
       .then(res => res.json())
       .then(data => setTrips(data))
       .catch(console.error);

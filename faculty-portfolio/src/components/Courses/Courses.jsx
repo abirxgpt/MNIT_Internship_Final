@@ -16,7 +16,7 @@ function Courses() {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/courses/all');
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/courses/all`);
         if (!res.ok) throw new Error('Failed to fetch courses');
         const data = await res.json();
         setCourses(data);

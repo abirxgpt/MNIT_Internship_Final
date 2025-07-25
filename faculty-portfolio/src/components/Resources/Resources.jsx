@@ -16,7 +16,7 @@ function Resources() {
   useEffect(() => {
     const fetchResources = async () => {
       try {
-        const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/resources/all');
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/resources/all`);
         if (!res.ok) throw new Error('Failed to fetch resources');
 
         const data = await res.json();

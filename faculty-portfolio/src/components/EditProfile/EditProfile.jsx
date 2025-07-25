@@ -80,7 +80,7 @@ function EditProfile() {
       achievements: true,
     };
     try {
-      const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/tab-visibility/all');
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/tab-visibility/all`);
       const responseData = await res.json();
 
       const updatedTabs = responseData.reduce((acc, item) => {
@@ -103,7 +103,7 @@ function EditProfile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/profile');
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/profile`);
         const data = await res.json();
         setProfile({
           name: data.name || '',
@@ -153,7 +153,7 @@ function EditProfile() {
       // console.log('📦 Payload being sent to backend:', payload);
 
       try {
-        const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/profile/update', {
+        const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/profile/update`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
@@ -178,7 +178,7 @@ function EditProfile() {
     formData.append('photo', selectedPhoto);
 
     try {
-      const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/profile/photo', {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/profile/photo`, {
         method: 'POST',
         body: formData
       });
@@ -202,7 +202,7 @@ function EditProfile() {
     formData.append('cv', selectedCV);
 
     try {
-      const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/profile/upload-cv', {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/profile/upload-cv`, {
         method: 'POST',
         body: formData,
       });
@@ -222,7 +222,7 @@ function EditProfile() {
         fieldName,
         enabled,
       }));
-      const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/tab-visibility/update', {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/tab-visibility/update`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
@@ -237,7 +237,7 @@ function EditProfile() {
 
   const fetchPending = async () => {
     try {
-      const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/newstudents/pending');
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/newstudents/pending`);
       const data = await res.json();
       setPendingStudents(data);
     } catch (err) {

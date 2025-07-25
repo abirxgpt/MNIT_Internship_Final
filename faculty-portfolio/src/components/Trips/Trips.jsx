@@ -9,7 +9,7 @@ function Trips() {
     useEffect(() => {
         const fetchTrips = async () => {
             try {
-                const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/trips/all');
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/trips/all`);
                 const data = await res.json();
                 setTrips(data);
             } catch (err) {

@@ -9,7 +9,7 @@ function Publications() {
   useEffect(() => {
     const fetchPublications = async () => {
       try {
-        const response = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/publications/all');
+        const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/publications/all`);
         const data = await response.json();
         // console.log("Fetched publications:", data);
         setPublications(data);

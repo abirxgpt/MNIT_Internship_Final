@@ -27,7 +27,7 @@ function AddTrip() {
         }
 
         try {
-            const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/trips/add', {
+            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/trips/add`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)

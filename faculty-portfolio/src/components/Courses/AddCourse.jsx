@@ -80,7 +80,7 @@ function AddCourse() {
         }
 
         try {
-            const response = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/courses/add', {
+            const response = await fetch(`{import.meta.env.VITE_API_BASE_URL}/api/courses/add`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

@@ -27,7 +27,7 @@ function AddProject() {
     useEffect(() => {
         async function fetchFaculty() {
             try {
-                const res = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/faculty/all'); // example URL
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/faculty/all`); // example URL
                 const data = await res.json();
                 setFacultyList(data);
             } catch (error) {
@@ -67,7 +67,7 @@ function AddProject() {
             }
         }
         try {
-            const response = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/projects/add', {
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/projects/add`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

@@ -14,7 +14,7 @@ const AddLecturePlan = () => {
     useEffect(() => {
         // Fetch courses for dropdown
         const fetchCourses = async () => {
-            const response = await fetch('${import.meta.env.VITE_API_BASE_URL}/api/courses/all');
+            const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/courses/all`);
             const data = await response.json();
             setCourses(data);
         };
