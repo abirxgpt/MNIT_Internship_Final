@@ -32,7 +32,7 @@ const Navbar = () => {
 
         const fetchVisibleTabs = async () => {
             try {
-                const res = await fetch("${import.meta.env.VITE_API_BASE_URL}/api/tab-visibility/all");
+                const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/tab-visibility/all`);
                 const data = await res.json();
                 const formatted = {};
                 data.forEach(item => {

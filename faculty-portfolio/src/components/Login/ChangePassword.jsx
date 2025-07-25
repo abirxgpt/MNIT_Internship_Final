@@ -21,7 +21,7 @@ const ChangePassword = () => {
     setIsUpdating(true);
 
     try {
-      const res = await fetch("${import.meta.env.VITE_API_BASE_URL}/api/auth/change-password", {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/change-password`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId, oldPassword, newPassword })
