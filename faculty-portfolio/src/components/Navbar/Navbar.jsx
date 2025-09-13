@@ -27,6 +27,7 @@ const Navbar = () => {
           formatted[item.fieldName.toLowerCase()] = item.enabled;
         });
         setVisibleTabs(formatted);
+        console.log('Tab visibility data loaded:', formatted);
       } catch (err) {
         console.error('Failed to fetch tab visibility', err);
         // Set default visible tabs if fetch fails
@@ -65,8 +66,10 @@ const Navbar = () => {
     const key = tabName.toLowerCase();
     if (role === 'admin') return true; // Admin sees everything
     if (role === 'student') {
-      // For students, check if the tab is explicitly enabled
-      return visibleTabs.hasOwnProperty(key) ? visibleTabs[key] : false;
+      // For students, show tab if it's explicitly enabled or if it doesn't exist in DB (default to visible)
+      const result = visibleTabs.hasOwnProperty(key) ? visibleTabs[key] : true;
+      console.log(`Tab "${tabName}" (${key}): ${result} (exists: ${visibleTabs.hasOwnProperty(key)}, value: ${visibleTabs[key]})`);
+      return result;
     }
     return true; // For non-logged-in or other roles
   };
