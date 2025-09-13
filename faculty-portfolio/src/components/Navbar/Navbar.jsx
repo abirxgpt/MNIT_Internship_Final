@@ -15,6 +15,7 @@ const Navbar = () => {
   useEffect(() => {
     const storedUserId = localStorage.getItem('userId');
     const storedRole = localStorage.getItem('role');
+    console.log('User login status:', { userId: storedUserId, role: storedRole });
     setIsLoggedIn(!!storedUserId);
     setRole(storedRole);
 
@@ -64,13 +65,19 @@ const Navbar = () => {
 
   const shouldShow = (tabName) => {
     const key = tabName.toLowerCase();
-    if (role === 'admin') return true; // Admin sees everything
+    console.log(`shouldShow called for "${tabName}" - role: ${role}, key: ${key}`);
+    
+    if (role === 'admin') {
+      console.log(`Admin user - showing "${tabName}"`);
+      return true; // Admin sees everything
+    }
     if (role === 'student') {
       // For students, show tab if it's explicitly enabled or if it doesn't exist in DB (default to visible)
       const result = visibleTabs.hasOwnProperty(key) ? visibleTabs[key] : true;
-      console.log(`Tab "${tabName}" (${key}): ${result} (exists: ${visibleTabs.hasOwnProperty(key)}, value: ${visibleTabs[key]})`);
+      console.log(`Student user - Tab "${tabName}" (${key}): ${result} (exists: ${visibleTabs.hasOwnProperty(key)}, value: ${visibleTabs[key]})`);
       return result;
     }
+    console.log(`Non-logged-in user - showing "${tabName}"`);
     return true; // For non-logged-in or other roles
   };
 
