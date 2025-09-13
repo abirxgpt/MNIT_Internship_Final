@@ -89,7 +89,7 @@ function EditProfile() {
       }, {});
 
       const finalTabs = Object.keys(defaultTabs).reduce((acc, key) => {
-        acc[key] = updatedTabs[key] ?? true;
+        acc[key] = updatedTabs.hasOwnProperty(key) ? updatedTabs[key] : true;
         return acc;
       }, {});
 

@@ -29,6 +29,19 @@ const Navbar = () => {
         setVisibleTabs(formatted);
       } catch (err) {
         console.error('Failed to fetch tab visibility', err);
+        // Set default visible tabs if fetch fails
+        setVisibleTabs({
+          home: true,
+          publications: true,
+          courses: true,
+          projects: true,
+          events: true,
+          students: true,
+          trips: true,
+          gallery: true,
+          resources: true,
+          achievements: true,
+        });
       }
     };
 
@@ -51,7 +64,10 @@ const Navbar = () => {
   const shouldShow = (tabName) => {
     const key = tabName.toLowerCase();
     if (role === 'admin') return true; // Admin sees everything
-    if (role === 'student') return visibleTabs?.[key]; // Show only if enabled
+    if (role === 'student') {
+      // For students, check if the tab is explicitly enabled
+      return visibleTabs.hasOwnProperty(key) ? visibleTabs[key] : false;
+    }
     return true; // For non-logged-in or other roles
   };
 
