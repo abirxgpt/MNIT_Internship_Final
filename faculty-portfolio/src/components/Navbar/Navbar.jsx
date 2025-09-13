@@ -71,14 +71,11 @@ const Navbar = () => {
       console.log(`Admin user - showing "${tabName}"`);
       return true; // Admin sees everything
     }
-    if (role === 'student') {
-      // For students, show tab if it's explicitly enabled or if it doesn't exist in DB (default to visible)
-      const result = visibleTabs.hasOwnProperty(key) ? visibleTabs[key] : true;
-      console.log(`Student user - Tab "${tabName}" (${key}): ${result} (exists: ${visibleTabs.hasOwnProperty(key)}, value: ${visibleTabs[key]})`);
-      return result;
-    }
-    console.log(`Non-logged-in user - showing "${tabName}"`);
-    return true; // For non-logged-in or other roles
+    
+    // For both students and guests, respect tab visibility settings
+    const result = visibleTabs.hasOwnProperty(key) ? visibleTabs[key] : true;
+    console.log(`${role || 'Guest'} user - Tab "${tabName}" (${key}): ${result} (exists: ${visibleTabs.hasOwnProperty(key)}, value: ${visibleTabs[key]})`);
+    return result;
   };
 
   return (
