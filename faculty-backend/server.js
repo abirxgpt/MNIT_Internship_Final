@@ -25,7 +25,11 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://mnit-internship-final-8fao.vercel.app"],
+  origin: [
+    "http://localhost:5173", 
+    "https://mnit-internship-final-8fao.vercel.app",
+    "https://mnit-internship-final-8fao-git-main-abirxgpts-projects.vercel.app"
+  ],
   credentials: true,
 };
 
@@ -33,7 +37,11 @@ app.use(cors(corsOptions));
 app.options("/", cors(corsOptions));
 
 app.use((req, res, next) => {
-  const allowedOrigins = ["http://localhost:5173", "https://mnit-internship-final-8fao.vercel.app"];
+  const allowedOrigins = [
+    "http://localhost:5173", 
+    "https://mnit-internship-final-8fao.vercel.app",
+    "https://mnit-internship-final-8fao-git-main-abirxgpts-projects.vercel.app"
+  ];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.header("Access-Control-Allow-Origin", origin);
